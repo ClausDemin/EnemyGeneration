@@ -56,8 +56,6 @@ namespace Assets.Codebase.ObjectPool
                 T item = Create();
 
                 item.gameObject.SetActive(isActive);
-
-                _items.Enqueue(item);
             }
         }
 

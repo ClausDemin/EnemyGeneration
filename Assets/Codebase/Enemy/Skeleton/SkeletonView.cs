@@ -1,10 +1,10 @@
 using Assets.Codebase;
 using UnityEngine;
 
-[RequireComponent(typeof(Enemy), typeof(Animator), typeof(AnimationStatusProvider))]
-public class EnemyView : MonoBehaviour
+[RequireComponent(typeof(AbstractEnemy), typeof(Animator), typeof(AnimationStatusProvider))]
+public class SkeletonView : MonoBehaviour
 {
-    private Enemy _enemy;
+    private AbstractEnemy _enemy;
     private Animator _animator;
     private AnimationStatusProvider _statusProvider;
 
@@ -14,7 +14,7 @@ public class EnemyView : MonoBehaviour
 
     private void Awake()
     {
-        _enemy = GetComponent<Enemy>();
+        _enemy = GetComponent<AbstractEnemy>();
         _animator = GetComponent<Animator>();
         _statusProvider = GetComponent<AnimationStatusProvider>();
     }
